@@ -14,3 +14,5 @@ execute as @e[type=block_display,tag=meteor_display,scores={timer=16..}] run dat
 execute as @e[type=block_display,tag=meteor_display,scores={timer=24..}] run data modify entity @s transformation.left_rotation set value {angle:6.28318530718f,axis:[0.57735026919f,0.57735026919f,0.57735026919f]}
 execute as @e[type=block_display,tag=meteor_display,scores={timer=24..}] run data modify entity @s start_interpolation set value 0
 scoreboard players reset @e[type=block_display,tag=meteor_display,scores={timer=24..}] timer
+
+execute if score &swapTimer globals matches 0.. run function disastergame:swaptick
