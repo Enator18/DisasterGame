@@ -8,4 +8,5 @@ execute if score &swapTimer globals matches 20 at @a run playsound minecraft:ite
 execute if score &swapTimer globals matches 0 at @a run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 1
 execute if score &swapTimer globals matches 0 run function disastergame:swapplayers
 execute if score &swapTimer globals matches 0 at @e[tag=alive] run particle poof ~ ~1 ~ .25 .4 .25 0 25
+execute if score &swapTimer globals matches 0 run title @a clear
 scoreboard players remove &swapTimer globals 1
