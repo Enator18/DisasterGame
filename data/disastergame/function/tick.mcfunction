@@ -8,6 +8,9 @@ execute as @e[type=armor_stand,tag=frag,nbt={OnGround:1b}] at @s run function di
 
 scoreboard players add @e[type=block_display,tag=meteor_display] timer 1
 execute as @e[type=block_display,tag=meteor_display,scores={timer=8..}] run data modify entity @s transformation.left_rotation set value {angle:2.09439510239f,axis:[0.57735026919f,0.57735026919f,0.57735026919f]}
+execute as @e[type=block_display,tag=meteor_display,scores={timer=8..}] run data modify entity @s start_interpolation set value 0
 execute as @e[type=block_display,tag=meteor_display,scores={timer=16..}] run data modify entity @s transformation.left_rotation set value {angle:4.18879020479f,axis:[0.57735026919f,0.57735026919f,0.57735026919f]}
+execute as @e[type=block_display,tag=meteor_display,scores={timer=16..}] run data modify entity @s start_interpolation set value 0
 execute as @e[type=block_display,tag=meteor_display,scores={timer=24..}] run data modify entity @s transformation.left_rotation set value {angle:6.28318530718f,axis:[0.57735026919f,0.57735026919f,0.57735026919f]}
+execute as @e[type=block_display,tag=meteor_display,scores={timer=24..}] run data modify entity @s start_interpolation set value 0
 scoreboard players reset @e[type=block_display,tag=meteor_display,scores={timer=24..}] timer
