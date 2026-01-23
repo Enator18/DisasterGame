@@ -1,3 +1,4 @@
+#Meteor shower
 execute at @e[type=armor_stand,tag=meteor] run particle minecraft:campfire_cosy_smoke ~ ~4 ~ .2 .3 .2 0 8
 execute at @e[type=armor_stand,tag=meteor] run particle minecraft:flame ~ ~4 ~ .2 .3 .2 0 8
 scoreboard players add @e[type=armor_stand,tag=meteor] timer 1
@@ -15,4 +16,11 @@ execute as @e[type=block_display,tag=meteor_display,scores={timer=24..}] run dat
 execute as @e[type=block_display,tag=meteor_display,scores={timer=24..}] run data modify entity @s start_interpolation set value 0
 scoreboard players reset @e[type=block_display,tag=meteor_display,scores={timer=24..}] timer
 
+#Player swapping
 execute if score &swapTimer globals matches 0.. run function disastergame:swaptick
+
+#Throwable tnt
+execute at @e[type=snowball] run kill @n[tag=snowball_hit]
+execute at @e[tag=snowball_hit] run summon tnt ~ ~ ~ {fuse:20}
+kill @e[tag=snowball_hit]
+execute at @e[type=snowball] run summon marker ~ ~ ~ {Tags:["snowball_hit"]}
