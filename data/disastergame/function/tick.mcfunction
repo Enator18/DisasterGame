@@ -6,6 +6,10 @@ execute at @e[type=armor_stand,tag=meteor,scores={timer=4..}] run playsound mine
 scoreboard players reset @e[type=armor_stand,tag=meteor,scores={timer=4..}] timer
 execute as @e[type=armor_stand,tag=meteor,nbt={OnGround:1b}] at @s run function disastergame:meteorhit
 execute as @e[type=armor_stand,tag=frag,nbt={OnGround:1b}] at @s run function disastergame:fraghit
+execute as @e[type=armor_stand,tag=meteor] on passengers run tag @s add alive
+execute as @e[type=armor_stand,tag=frag] on passengers run tag @s add alive
+kill @e[tag=meteor_display,tag=!alive]
+tag @e[tag=meteor_display,tag=alive] remove alive
 
 scoreboard players add @e[type=block_display,tag=meteor_display] timer 1
 execute as @e[type=block_display,tag=meteor_display,scores={timer=8..}] run data modify entity @s transformation.left_rotation set value {angle:2.09439510239f,axis:[0.57735026919f,0.57735026919f,0.57735026919f]}
