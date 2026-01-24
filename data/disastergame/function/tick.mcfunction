@@ -28,6 +28,6 @@ execute at @e[type=snowball] run summon marker ~ ~ ~ {Tags:["snowball_hit"]}
 #Flood
 scoreboard players add @e[tag=flood] timer 1
 execute at @e[tag=flood] run fill ~ ~ ~ ~ ~ ~143 water replace air
-execute as @e[tag=flood] run tp @s ~1 ~ ~
+execute as @e[tag=flood] at @s run tp @s ~1 ~ ~
 execute as @e[tag=flood,scores={timer=144..}] run tp @s ~-144 ~1 ~
 scoreboard players reset @e[tag=flood,scores={timer=144..}]
