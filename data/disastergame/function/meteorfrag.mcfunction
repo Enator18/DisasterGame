@@ -5,8 +5,8 @@ execute store result entity @e[type=armor_stand,tag=new,limit=1] Motion[2] doubl
 scoreboard players add @s count 1
 tag @e[type=armor_stand,tag=new] remove new
 summon falling_block ~ ~ ~ {Tags:["new"],BlockState:{Name:"minecraft:fire"},Time:1}
-execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[0] double 0.001 run random value -3000..3000
-execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[1] double 0.001 run random value 500..2000
-execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[2] double 0.001 run random value -3000..3000
+execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[0] double 0.001 run random value -2500..2500
+execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[1] double 0.001 run random value 500..1500
+execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[2] double 0.001 run random value -2500..2500
 tag @e[type=falling_block,tag=new] remove new
 execute if entity @s[scores={count=..10}] run function disastergame:meteorfrag
