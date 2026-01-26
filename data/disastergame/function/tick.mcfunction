@@ -37,7 +37,6 @@ execute as @e[tag=flood,scores={timer=144..}] at @s run tp @s ~-144 ~1 ~
 scoreboard players reset @e[tag=flood,scores={timer=144..}]
 
 #Infection
-execute as @a[tag=infected] at @s run function disastergame:transformplayer
 execute as @e[type=mannequin,tag=infected_display] at @s run function disastergame:tpfake
 tag @e[type=husk] remove used
 execute as @e[type=husk] run data modify entity @s DrownedConversionTime set value -1
