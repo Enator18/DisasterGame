@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "hit_by_husk": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:husk"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hit_by_husk"
+    ]
+  ],
+  "rewards": {
+    "function": "disastergame:infectplayer"
+  }
+}
