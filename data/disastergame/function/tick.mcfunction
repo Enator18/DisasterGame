@@ -36,7 +36,7 @@ execute as @e[tag=flood] at @s run tp @s ~1 ~ ~
 execute as @e[tag=flood,scores={timer=144..}] at @s run tp @s ~-144 ~1 ~
 scoreboard players add @e[tag=flood,scores={timer=144..}] timer2 1
 kill @e[tag=flood,scores={timer2=96..}]
-scoreboard players reset @e[tag=flood,scores={timer=144..}]
+scoreboard players reset @e[tag=flood,scores={timer=144..}] timer
 
 #Infection
 scoreboard players add @a[tag=alive,tag=infected] infectionTimer 1
