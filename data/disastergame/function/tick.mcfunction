@@ -54,6 +54,7 @@ execute as @e[type=husk] run data modify entity @s DrownedConversionTime set val
 
 #Tornado
 execute at @e[type=marker,tag=tornado] run summon block_display ~ ~ ~ {interpolation_duration:1,teleport_duration:1,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}
-execute store result entity @n[type=block_display,tag=tornado,tag=new] Rotation[0] double 0.001 run random value -180000..180000
-tag @n[type=block_display,tag=tornado,tag=new] remove new
+execute at @e[type=marker,tag=tornado] run summon block_display ~ ~ ~ {interpolation_duration:1,teleport_duration:1,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}
+execute as @e[type=block_display,tag=tornado,tag=new] store result entity @s Rotation[0] double 0.001 run random value -180000..180000
+tag @e[type=block_display,tag=tornado,tag=new] remove new
 execute as @e[type=block_display,tag=tornado] at @s run function disastergame:tornadoanim
