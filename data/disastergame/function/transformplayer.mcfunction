@@ -19,4 +19,5 @@ effect clear @s nausea
 effect clear @s slowness
 effect clear @s darkness
 effect clear @s resistance
+stopsound @s master minecraft:entity.enderman.stare
 gamemode spectator
