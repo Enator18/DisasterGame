@@ -53,7 +53,7 @@ tag @e[type=husk] remove used
 execute as @e[type=husk] run data modify entity @s DrownedConversionTime set value -1
 
 #Tornado
-execute as @e[type=marker,tag=tornado_emitter] at @s run rotate @s ~1 ~
+#execute as @e[type=marker,tag=tornado_emitter] at @s run rotate @s ~1 ~
 execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot","new"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}]}
 execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot","new"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}]}
 execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot","new"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}]}
