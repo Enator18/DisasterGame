@@ -57,6 +57,7 @@ execute at @e[type=marker,tag=tornado_emitter] run summon block_display ~ ~ ~ {i
 execute at @e[type=marker,tag=tornado_emitter] run summon block_display ~ ~ ~ {interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],Passengers:[{id:"minecraft:marker",Tags:["tornado","tornado_particle"]}],block_state:{Name:"minecraft:white_concrete"}}
 execute at @e[type=marker,tag=tornado_emitter] run summon block_display ~ ~ ~ {interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],Passengers:[{id:"minecraft:marker",Tags:["tornado","tornado_particle"]}],block_state:{Name:"minecraft:white_concrete"}}
 execute as @e[type=block_display,tag=tornado,tag=new] store result entity @s Rotation[0] double 0.001 run random value -180000..180000
+scoreboard players set @e[type=block_display,tag=tornado,tag=new] timer2 8
 tag @e[type=block_display,tag=tornado,tag=new] remove new
 execute as @e[type=block_display,tag=tornado] at @s run function disastergame:tornadoanim
 #execute at @e[type=marker,tag=tornado_particle] run particle minecraft:gust ~ ~ ~ 0.5 0.5 0.5 1 1
