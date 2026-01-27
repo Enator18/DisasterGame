@@ -1,14 +1,13 @@
 #Meteor shower
-execute at @e[type=armor_stand,tag=meteor] run particle minecraft:campfire_cosy_smoke ~ ~4 ~ .2 .3 .2 0 8
-execute at @e[type=armor_stand,tag=meteor] run particle minecraft:flame ~ ~4 ~ .2 .3 .2 0 8
-scoreboard players add @e[type=armor_stand,tag=meteor] timer 1
-execute at @e[type=armor_stand,tag=meteor,scores={timer=4..}] run playsound minecraft:item.firecharge.use block @a ~ ~ ~ 1 0
-scoreboard players reset @e[type=armor_stand,tag=meteor,scores={timer=4..}] timer
-execute as @e[type=armor_stand,tag=meteor,nbt={OnGround:1b}] at @s run function disastergame:meteorhit
-execute as @e[type=armor_stand,tag=frag,nbt={OnGround:1b}] at @s run function disastergame:fraghit
-execute as @e[type=armor_stand,tag=meteor] on passengers run tag @s add alive
-execute as @e[type=armor_stand,tag=frag] on passengers run tag @s add alive
-kill @e[tag=meteor_display,tag=!alive]
+execute at @e[type=snowball,tag=meteor] run particle minecraft:campfire_cosy_smoke ~ ~4 ~ .2 .3 .2 0 8
+execute at @e[type=snowball,tag=meteor] run particle minecraft:flame ~ ~4 ~ .2 .3 .2 0 8
+scoreboard players add @e[type=snowball,tag=meteor] timer 1
+execute at @e[type=snowball,tag=meteor,scores={timer=4..}] run playsound minecraft:item.firecharge.use block @a ~ ~ ~ 1 0
+scoreboard players reset @e[type=snowball,tag=meteor,scores={timer=4..}] timer
+execute as @e[type=snowball,tag=meteor] on passengers run tag @s add alive
+execute as @e[type=snowball,tag=frag] on passengers run tag @s add alive
+execute at @e[tag=meteor_display,tag=!frag,tag=!alive] run function disastergame:meteorhit
+execute at @e[tag=meteor_display,tag=frag,tag=!alive] run function disastergame:fraghit
 tag @e[tag=meteor_display,tag=alive] remove alive
 
 scoreboard players add @e[type=block_display,tag=meteor_display] timer 1
@@ -24,10 +23,10 @@ scoreboard players reset @e[type=block_display,tag=meteor_display,scores={timer=
 execute if score &swapTimer globals matches 0.. run function disastergame:swaptick
 
 #Throwable tnt
-execute at @e[type=snowball] run kill @n[tag=snowball_hit]
+execute at @e[type=snowball,tag=!special] run kill @n[tag=snowball_hit]
 execute at @e[tag=snowball_hit] run summon tnt ~ ~ ~ {fuse:20}
 kill @e[tag=snowball_hit]
-execute at @e[type=snowball] run summon marker ~ ~ ~ {Tags:["snowball_hit"]}
+execute at @e[type=snowball,tag=!special] run summon marker ~ ~ ~ {Tags:["snowball_hit"]}
 
 #Flood
 scoreboard players add @e[tag=flood] timer 1
