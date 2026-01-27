@@ -3,3 +3,4 @@ execute store result entity @s transformation.translation[0] float 0.1 run score
 execute store result entity @s transformation.translation[1] float 0.2 run scoreboard players get @s timer
 rotate @s ~18 ~
 data modify entity @s start_interpolation set value 0
+kill @s[scores={timer=100..}]
