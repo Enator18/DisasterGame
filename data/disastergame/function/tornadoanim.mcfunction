@@ -7,5 +7,5 @@ execute store result storage disastergame:temp arg2 float 0.2 run scoreboard pla
 function disastergame:tornadoparticle with storage disastergame:temp
 rotate @s ~18 ~
 data modify entity @s start_interpolation set value -1
-execute as @s[scores={timer=150..}] on passengers run kill @s
+execute as @s[scores={timer=150..}] on vehicle run kill @s
 kill @s[scores={timer=150..}]
