@@ -1,1 +1,1 @@
-$particle minecraft:dust{color:[1.000,1.000,1.000],scale:1} ^$(arg1) ^$(arg2) ^ 0.5 0.5 0.5 0 1 force
+$particle minecraft:dust{color:[1.000,1.000,1.000],scale:4} ^$(arg1) ^$(arg2) ^ 0.5 0.5 0.5 0 1 force
