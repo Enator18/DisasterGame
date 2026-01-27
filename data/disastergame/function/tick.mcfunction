@@ -56,9 +56,7 @@ execute as @e[type=husk] run data modify entity @s DrownedConversionTime set val
 execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}]}
 execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}]}
 execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}]}
-execute as @e[type=block_display,tag=tornado,tag=new] store result entity @s Rotation[0] double 0.001 run random value -180000..180000
-execute as @e[type=block_display,tag=tornado,tag=new] store result score @s timer2 run random value 4..24
-tag @e[type=block_display,tag=tornado,tag=new] remove new
+execute as @e[type=block_display,tag=tornado,tag=new] run function disastergame:tornadoanimstart
 execute as @e[type=block_display,tag=tornado] at @s run function disastergame:tornadoanim
 execute as @e[type=armor_stand,tag=tornado_pivot] at @s run rotate @s ~4 ~
 execute as @e[type=armor_stand,tag=tornado_pivot] at @s run tp @s ^ ^ ^0.1
