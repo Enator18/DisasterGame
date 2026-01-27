@@ -58,6 +58,6 @@ execute at @e[type=marker,tag=tornado_emitter] run summon block_display ~ ~ ~ {i
 execute at @e[type=marker,tag=tornado_emitter] run summon block_display ~ ~ ~ {interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}
 execute as @e[type=block_display,tag=tornado,tag=new] store result entity @s Rotation[0] double 0.001 run random value -180000..180000
 scoreboard players set @e[type=block_display,tag=tornado,tag=new] timer2 15
-execute store result score @e[type=block_display,tag=tornado,tag=new] timer2 run random value 8..16
+execute store result score @e[type=block_display,tag=tornado,tag=new] timer2 run random value 4..24
 tag @e[type=block_display,tag=tornado,tag=new] remove new
 execute as @e[type=block_display,tag=tornado] at @s run function disastergame:tornadoanim
