@@ -53,9 +53,9 @@ tag @e[type=husk] remove used
 execute as @e[type=husk] run data modify entity @s DrownedConversionTime set value -1
 
 #Tornado
-execute at @e[type=marker,tag=tornado_emitter] run summon block_display ~ ~ ~ {interpolation_duration:1,teleport_duration:1,Tags:["tornado","new"],Passengers:[{id:"minecraft:marker",Tags:["tornado","tornado_particle"]}],block_state:{Name:"minecraft:white_concrete"}}
-execute at @e[type=marker,tag=tornado_emitter] run summon block_display ~ ~ ~ {interpolation_duration:1,teleport_duration:1,Tags:["tornado","new"],Passengers:[{id:"minecraft:marker",Tags:["tornado","tornado_particle"]}],block_state:{Name:"minecraft:white_concrete"}}
-execute at @e[type=marker,tag=tornado_emitter] run summon block_display ~ ~ ~ {interpolation_duration:1,teleport_duration:1,Tags:["tornado","new"],Passengers:[{id:"minecraft:marker",Tags:["tornado","tornado_particle"]}],block_state:{Name:"minecraft:white_concrete"}}
+execute at @e[type=marker,tag=tornado_emitter] run summon block_display ~ ~ ~ {interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],Passengers:[{id:"minecraft:marker",Tags:["tornado","tornado_particle"]}],block_state:{Name:"minecraft:white_concrete"}}
+execute at @e[type=marker,tag=tornado_emitter] run summon block_display ~ ~ ~ {interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],Passengers:[{id:"minecraft:marker",Tags:["tornado","tornado_particle"]}],block_state:{Name:"minecraft:white_concrete"}}
+execute at @e[type=marker,tag=tornado_emitter] run summon block_display ~ ~ ~ {interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],Passengers:[{id:"minecraft:marker",Tags:["tornado","tornado_particle"]}],block_state:{Name:"minecraft:white_concrete"}}
 execute as @e[type=block_display,tag=tornado,tag=new] store result entity @s Rotation[0] double 0.001 run random value -180000..180000
 tag @e[type=block_display,tag=tornado,tag=new] remove new
 execute as @e[type=block_display,tag=tornado] at @s run function disastergame:tornadoanim
