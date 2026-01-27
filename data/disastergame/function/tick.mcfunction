@@ -39,8 +39,12 @@ kill @e[tag=flood,scores={timer2=96..}]
 scoreboard players reset @e[tag=flood,scores={timer=144..}]
 
 #Infection
-scoreboard players add @e[tag=alive,tag=infected] infectionTimer 1
-execute as @e[tag=infected,scores={infectionTimer=100..}] at @s run function disastergame:transformplayer
+scoreboard players add @a[tag=alive,tag=infected] infectionTimer 1
+effect give @a[tag=infected,scores={infectionTimer=80..}] minecraft:nausea 60 1 true
+playsound minecraft:entity.enderman.stare master @a[tag=infected,scores={infectionTimer=120..}] ~ ~ ~ 100
+effect give @a[tag=infected,scores={infectionTimer=176..}] minecraft:slowness 60 1 true
+effect give @a[tag=infected,scores={infectionTimer=176..}] minecraft:darkness 60 1 true
+execute as @a[tag=infected,scores={infectionTimer=256..}] at @s run function disastergame:transformplayer
 execute as @e[type=mannequin,tag=infected_display] at @s run function disastergame:tpfake
 tag @e[type=husk] remove used
 execute as @e[type=husk] run data modify entity @s DrownedConversionTime set value -1
