@@ -1,3 +1,5 @@
+fill -6 40 -7 137 135 136 air
+
 place template minecraft:island_map_1 -6 40 -7
 place template minecraft:island_map_2 -6 40 41
 place template minecraft:island_map_3 -6 40 89
