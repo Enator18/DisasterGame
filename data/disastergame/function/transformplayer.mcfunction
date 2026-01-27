@@ -18,4 +18,5 @@ tag @n[type=husk,tag=new] remove new
 effect clear @s nausea
 effect clear @s slowness
 effect clear @s darkness
+effect clear @s resistance
 gamemode spectator
