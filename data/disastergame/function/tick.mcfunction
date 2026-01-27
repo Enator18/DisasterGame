@@ -5,7 +5,7 @@ execute if score &meteorTimer globals matches 0 run scoreboard players set &mete
 execute at @e[type=armor_stand,tag=meteor] run particle minecraft:campfire_cosy_smoke ~ ~4 ~ .2 .3 .2 0 8 force
 execute at @e[type=armor_stand,tag=meteor] run particle minecraft:flame ~ ~4 ~ .2 .3 .2 0 8 force
 scoreboard players add @e[type=armor_stand,tag=meteor] timer 1
-execute at @e[type=armor_stand,tag=meteor,scores={timer=4..}] run playsound minecraft:item.firecharge.use block @a ~ ~ ~ 1 0
+execute at @e[type=armor_stand,tag=meteor,scores={timer=4..}] run playsound minecraft:item.firecharge.use block @a ~ ~ ~ 2 0
 scoreboard players reset @e[type=armor_stand,tag=meteor,scores={timer=4..}] timer
 execute as @e[type=armor_stand,tag=meteor,nbt={OnGround:1b}] at @s run function disastergame:meteorhit
 execute as @e[type=armor_stand,tag=frag,nbt={OnGround:1b}] at @s run function disastergame:fraghit
@@ -51,3 +51,6 @@ execute as @a[tag=infected,scores={infectionTimer=256..}] at @s run function dis
 execute as @e[type=mannequin,tag=infected_display] at @s run function disastergame:tpfake
 tag @e[type=husk] remove used
 execute as @e[type=husk] run data modify entity @s DrownedConversionTime set value -1
+
+#Tornado
+execute as @e[type=block_display,tag=tornado] run function disastergame:tornadoanim
