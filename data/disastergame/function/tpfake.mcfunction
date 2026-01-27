@@ -1,4 +1,4 @@
-tag @n[type=husk,tag=!used] add target
-tp @n[type=husk,tag=target]
-tag @n[type=husk,tag=target] add used
-tag @n[type=husk,tag=target] remove target
+scoreboard players operation &compare infectedID = @s infectedID
+tag @s add this
+execute as @e[type=husk] if score &compare infected = @s infected run tp @n[type=mannequin,tag=this] @s
+tag @s remove this
