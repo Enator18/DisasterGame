@@ -53,4 +53,4 @@ tag @e[type=husk] remove used
 execute as @e[type=husk] run data modify entity @s DrownedConversionTime set value -1
 
 #Tornado
-execute as @e[type=block_display,tag=tornado] run function disastergame:tornadoanim
+execute as @e[type=block_display,tag=tornado] at @s run function disastergame:tornadoanim
