@@ -6,8 +6,8 @@ execute at @e[type=snowball,tag=meteor,scores={timer=4..}] run playsound minecra
 scoreboard players reset @e[type=snowball,tag=meteor,scores={timer=4..}] timer
 execute as @e[type=snowball,tag=meteor] on passengers run tag @s add alive
 execute as @e[type=snowball,tag=frag] on passengers run tag @s add alive
-execute as @e[tag=meteor_display,tag=!frag,tag=!alive] at @s run function disastergame:meteorhit
-execute as @e[tag=meteor_display,tag=frag,tag=!alive] at @s run function disastergame:fraghit
+execute at @e[tag=meteor_display,tag=!frag,tag=!alive] run function disastergame:meteorhit
+execute at @e[tag=meteor_display,tag=frag,tag=!alive] run function disastergame:fraghit
 tag @e[tag=meteor_display,tag=alive] remove alive
 
 scoreboard players add @e[type=block_display,tag=meteor_display] timer 1
