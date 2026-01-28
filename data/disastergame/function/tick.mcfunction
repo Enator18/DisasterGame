@@ -53,9 +53,9 @@ tag @e[type=husk] remove used
 execute as @e[type=husk] run data modify entity @s DrownedConversionTime set value -1
 
 #Tornado
-execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}]}
-execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}]}
-execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}]}
+execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:fire"}}]}
+execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:fire"}}]}
+execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:fire"}}]}
 execute as @e[type=block_display,tag=tornado,tag=new] run function disastergame:tornadoanimstart
 execute as @e[type=block_display,tag=tornado] at @s run function disastergame:tornadoanim
 execute as @e[type=block_display,tag=tornado,sort=random,limit=100] at @s run function disastergame:tornadoparticle
