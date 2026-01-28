@@ -1,0 +1,1 @@
+$particle minecraft:cloud ^$(arg1) ^$(arg2) ^ 0.5 0.5 0.5 0 1 force
