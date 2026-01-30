@@ -72,5 +72,5 @@ execute if score &acidRain globals matches 1 run function disastergame:acidrain
 
 #Misc
 effect give @a minecraft:saturation infinite 255 true
-execute as @a if block ~ ~ ~ water run damage @s 1 minecraft:drown
-execute as @e[type=husk] if block ~ ~ ~ water run damage @s 1 minecraft:generic_kill
+execute as @a at @s if block ~ ~ ~ water run damage @s 1 minecraft:drown
+execute as @e[type=husk] at @s if block ~ ~ ~ water run damage @s 1 minecraft:generic_kill

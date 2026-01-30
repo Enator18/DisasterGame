@@ -1,6 +1,8 @@
 scoreboard players set &disasterTimer globals -1
 scoreboard players set &meteorTimer globals -1
 scoreboard players set &swapTimer globals -1
+scoreboard players set &acidRain globals 0
+weather clear
 kill @e[type=husk]
 kill @e[type=mannequin,tag=infected_display]
 kill @e[type=marker,tag=flood]
