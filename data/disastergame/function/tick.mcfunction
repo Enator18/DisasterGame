@@ -75,10 +75,6 @@ execute if score &rapture timer matches 0.. run function disastergame:rapturetic
 execute as @a[tag=alive] at @s run kill @s[y=300,dx=0,dy=1000,dz=0]
 
 #Death
-tp @a[tag=died2] 66 82 65
-tag @a remove died2
-tag @a[tag=died] add died2
-tag @a remove died
 execute as @a[tag=alive,scores={died=1..}] run function disastergame:playerdied
 scoreboard players reset @a died
 
