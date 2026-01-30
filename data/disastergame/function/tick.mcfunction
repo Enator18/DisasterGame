@@ -62,8 +62,7 @@ execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Inv
 execute as @e[type=block_display,tag=tornado,tag=new] run function disastergame:tornadoanimstart
 execute as @e[type=block_display,tag=tornado] at @s run function disastergame:tornadoanim
 execute as @e[type=block_display,tag=tornado,sort=random,limit=100] at @s run function disastergame:tornadoparticle
-execute as @e[type=armor_stand,tag=tornado_pivot] at @s run rotate @s ~4 ~
-execute as @e[type=armor_stand,tag=tornado_pivot] at @s run tp @s ^ ^0.2 ^0.1
+execute as @e[type=armor_stand,tag=tornado_pivot] run function disastergame:tornadopivot
 
 #Acid Rain
 execute if score &acidRain globals matches 1 run function disastergame:acidrain
