@@ -16,3 +16,4 @@ tag @a remove alive
 tag @a remove raptured
 tag @a remove infected
 team leave @a
+bossbar set minecraft:next_disaster players

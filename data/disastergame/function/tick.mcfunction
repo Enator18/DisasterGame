@@ -1,10 +1,11 @@
 #Disaster Timer
 execute if score &disasters timer matches 0 run function disastergame:adddisaster
 execute if score &disasters timer matches 0.. run scoreboard players remove &disasters timer 1
+execute store result bossbar minecraft:next_disaster value run scoreboard players get &disasters timer
 
 #Meteor shower
 execute if score &meteors timer matches 0.. run scoreboard players remove &meteors timer 1
-execute if score &meteors timers matches 0 run function disastergame:spawnmeteor
+execute if score &meteors timer matches 0 run function disastergame:spawnmeteor
 execute if score &meteors timer matches 0 run scoreboard players set &meteors timer 24
 execute at @e[type=armor_stand,tag=meteor] run particle minecraft:campfire_cosy_smoke ~ ~4 ~ .2 .3 .2 0 8 force
 execute at @e[type=armor_stand,tag=meteor] run particle minecraft:flame ~ ~4 ~ .2 .3 .2 0 8 force
