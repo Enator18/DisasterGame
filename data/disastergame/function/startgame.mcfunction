@@ -9,4 +9,4 @@ summon marker 0 0 0 {Tags:["selector","select_infection"]}
 summon marker 0 0 0 {Tags:["selector","select_shuffle"]}
 summon marker 0 0 0 {Tags:["selector","select_acidrain"]}
 
-scoreboard players set &disasterTimer globals 200
+scoreboard players set &disasters timer 200

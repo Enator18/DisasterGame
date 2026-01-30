@@ -1,11 +1,11 @@
 #Disaster Timer
-execute if score &disasterTimer globals matches 0 run function disastergame:adddisaster
-execute if score &disasterTimer globals matches 0.. run scoreboard players remove &disasterTimer globals 1
+execute if score &disasters timer matches 0 run function disastergame:adddisaster
+execute if score &disasters timer matches 0.. run scoreboard players remove &disasters timer 1
 
 #Meteor shower
-execute if score &meteorTimer globals matches 0.. run scoreboard players remove &meteorTimer globals 1
-execute if score &meteorTimer globals matches 0 run function disastergame:spawnmeteor
-execute if score &meteorTimer globals matches 0 run scoreboard players set &meteorTimer globals 24
+execute if score &meteors timer matches 0.. run scoreboard players remove &meteors timer 1
+execute if score &meteors timers matches 0 run function disastergame:spawnmeteor
+execute if score &meteors timer matches 0 run scoreboard players set &meteors timer 24
 execute at @e[type=armor_stand,tag=meteor] run particle minecraft:campfire_cosy_smoke ~ ~4 ~ .2 .3 .2 0 8 force
 execute at @e[type=armor_stand,tag=meteor] run particle minecraft:flame ~ ~4 ~ .2 .3 .2 0 8 force
 scoreboard players add @e[type=armor_stand,tag=meteor] timer 1
@@ -28,7 +28,7 @@ execute as @e[type=block_display,tag=meteor_display,scores={timer=24..}] run dat
 scoreboard players reset @e[type=block_display,tag=meteor_display,scores={timer=24..}] timer
 
 #Player swapping
-execute if score &swapTimer globals matches 0.. run function disastergame:swaptick
+execute if score &shuffle timer matches 0.. run function disastergame:swaptick
 
 #Throwable tnt
 execute at @e[type=snowball] run kill @n[tag=snowball_hit]
@@ -66,9 +66,11 @@ execute as @e[type=block_display,tag=tornado,sort=random,limit=100] at @s run fu
 execute as @e[type=armor_stand,tag=tornado_pivot] at @s run rotate @s ~4 ~
 execute as @e[type=armor_stand,tag=tornado_pivot] at @s run tp @s ^ ^ ^0.1
 
-
 #Acid Rain
 execute if score &acidRain globals matches 1 run function disastergame:acidrain
+
+#Rapture
+execute if score &rapture timer matches 0.. run function disastergame:rapturetick
 
 #Misc
 effect give @a minecraft:saturation infinite 255 true
