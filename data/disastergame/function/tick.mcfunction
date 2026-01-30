@@ -78,3 +78,4 @@ execute as @a[tag=alive] at @s run kill @s[y=300,dx=0,dy=1000,dz=0]
 effect give @a minecraft:saturation infinite 255 true
 execute as @a at @s if block ~ ~ ~ water run damage @s 1 minecraft:drown
 execute as @e[type=husk] at @s if block ~ ~ ~ water run damage @s 1 minecraft:generic_kill
+tag @a[gamemode=adventure] add alive
