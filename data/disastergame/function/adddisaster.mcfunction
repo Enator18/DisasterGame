@@ -4,4 +4,4 @@ execute if entity @n[type=marker,tag=selected,tag=infection] run function disast
 execute if entity @n[type=marker,tag=selected,tag=meteors] run function disastergame:events/meteors
 execute if entity @n[type=marker,tag=selected,tag=shuffle] run function disastergame:events/shuffle
 kill @n[type=marker,tag=selected]
-scoreboard players set &eventTimer globals 900
+scoreboard players set &disasterTimer globals 900
