@@ -5,4 +5,4 @@ tag @s remove raptured
 effect clear @s levitation
 effect clear @s glowing
 team leave @s
-tp @s 66 82 65
+tag @s add died
