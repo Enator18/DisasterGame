@@ -10,6 +10,7 @@ kill @e[type=marker,tag=flood]
 kill @e[type=armor_stand,tag=meteor]
 kill @e[type=armor_stand,tag=frag]
 kill @e[type=block_display,tag=meteor_display]
+kill @e[type=warden,tag=monster]
 kill @e[type=marker,tag=selector]
 
 tag @a remove alive
