@@ -8,4 +8,4 @@ summon marker 0 0 0 {Tags:["selector","select_meteors"]}
 summon marker 0 0 0 {Tags:["selector","select_infection"]}
 summon marker 0 0 0 {Tags:["selector","select_shuffle"]}
 
-function disastergame:adddisaster
+scoreboard players set &disasterTimer globals 200
