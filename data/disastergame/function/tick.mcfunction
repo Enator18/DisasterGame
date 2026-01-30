@@ -1,3 +1,7 @@
+#Disaster Timer
+execute if score &disasterTimer globals matches 0 run function disastergame:adddisaster
+execute if score &disasterTimer globals matches 0.. run scoreboard players remove &disasterTimer globals 1
+
 #Meteor shower
 execute if score &meteorTimer globals matches 0.. run scoreboard players remove &meteorTimer globals 1
 execute if score &meteorTimer globals matches 0 run function disastergame:spawnmeteor
@@ -65,3 +69,8 @@ execute as @e[type=armor_stand,tag=tornado_pivot] at @s run tp @s ^ ^ ^0.1
 
 #Acid Rain
 execute if score &acidRain globals matches 1 run function disastergame:acidrain
+
+#Misc
+effect give @a minecraft:saturation infinite 255 true
+execute as @a if block ~ ~ ~ water run damage @s 1 minecraft:drown
+execute as @e[type=husk] if block ~ ~ ~ water run damage @s 1 minecraft:generic_kill

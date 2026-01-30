@@ -1,0 +1,5 @@
+execute at @a run playsound minecraft:item.firecharge.use master @p ~ ~ ~ 10 0
+title @a title [{"bold":true,"color":"#FFBC63","italic":true,"text":"M","underlined":true},{"bold":true,"color":"#FFB65D","italic":true,"text":"E","underlined":true},{"bold":true,"color":"#FFAF57","italic":true,"text":"T","underlined":true},{"bold":true,"color":"#FFA951","italic":true,"text":"E","underlined":true},{"bold":true,"color":"#FFA24A","italic":true,"text":"O","underlined":true},{"bold":true,"color":"#FF9C44","italic":true,"text":"R ","underlined":true},{"bold":true,"color":"#FF953E","italic":true,"text":"S","underlined":true},{"bold":true,"color":"#FF8F38","italic":true,"text":"H","underlined":true},{"bold":true,"color":"#FF8832","italic":true,"text":"O","underlined":true},{"bold":true,"color":"#FF822C","italic":true,"text":"W","underlined":true},{"bold":true,"color":"#FF7B25","italic":true,"text":"E","underlined":true},{"bold":true,"color":"#FF6E19","italic":true,"text":"R","underlined":true}]
+title @a subtitle {"color":"#F2F2F2","italic":true,"text":"Take cover!"}
+
+scoreboard players set &meteorTimer globals 24

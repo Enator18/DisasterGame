@@ -9,5 +9,5 @@ execute if score &swapTimer globals matches 0 at @a run playsound minecraft:enti
 execute if score &swapTimer globals matches 0 run function disastergame:swapplayers
 execute if score &swapTimer globals matches 0 at @e[tag=alive] run particle poof ~ ~1 ~ .25 .4 .25 0 25
 execute if score &swapTimer globals matches 0 run title @a clear
-execute if score &swapTimer globals matches 0 run scoreboard players set &swapTimer globals 1200
+execute if score &swapTimer globals matches 0 store result score &swapTimer globals run random value 600..1500
 scoreboard players remove &swapTimer globals 1

@@ -1,4 +1,3 @@
-say transformplayer
 scoreboard players reset @s infectionTimer
 tag @s remove infected
 tag @s remove alive
