@@ -13,9 +13,9 @@ kill @e[type=block_display,tag=meteor_display]
 kill @e[type=warden,tag=monster]
 kill @e[type=marker,tag=selector]
 
+gamemode spectator @a[tag=alive]
 tag @a remove alive
 tag @a remove raptured
 tag @a remove infected
 team leave @a
-gamemode spectator @a
 bossbar set minecraft:next_disaster players
