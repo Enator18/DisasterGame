@@ -74,6 +74,10 @@ execute if score &acidRain globals matches 1 run function disastergame:acidrain
 execute if score &rapture timer matches 0.. run function disastergame:rapturetick
 execute as @a[tag=alive] at @s run kill @s[y=300,dx=0,dy=1000,dz=0]
 
+#Death
+execute as @a[tag=alive,scores={died=1..}] run function disastergame:playerdied
+scoreboard players reset @a died
+
 #Misc
 effect give @a minecraft:saturation infinite 255 true
 execute as @a at @s if block ~ ~ ~ water run damage @s 1 minecraft:drown
