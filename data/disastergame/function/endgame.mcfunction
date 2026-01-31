@@ -4,7 +4,7 @@ scoreboard players set &shuffle timer -1
 scoreboard players set &rapture timer -1
 scoreboard players set &acidRain globals 0
 weather clear
-kill @e[type=husk]
+kill @e[type=vindicator]
 kill @e[type=mannequin,tag=infected_display]
 kill @e[type=marker,tag=flood]
 kill @e[type=armor_stand,tag=meteor]

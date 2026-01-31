@@ -1,11 +1,11 @@
 {
   "criteria": {
-    "hit_by_husk": {
+    "hit_by_vindicator": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "damage": {
           "source_entity": {
-            "type": "minecraft:husk"
+            "type": "minecraft:vindicator"
           }
         }
       }
@@ -13,7 +13,7 @@
   },
   "requirements": [
     [
-      "hit_by_husk"
+      "hit_by_vindicator"
     ]
   ],
   "rewards": {

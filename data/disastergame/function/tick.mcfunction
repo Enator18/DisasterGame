@@ -54,8 +54,8 @@ effect give @a[tag=infected,scores={infectionTimer=176}] minecraft:slowness 60 1
 effect give @a[tag=infected,scores={infectionTimer=176}] minecraft:darkness 60 1 true
 execute as @a[tag=infected,scores={infectionTimer=256..}] at @s run function disastergame:transformplayer
 execute as @e[type=mannequin,tag=infected_display] at @s run function disastergame:tpfake
-tag @e[type=husk] remove used
-execute as @e[type=husk] run data modify entity @s DrownedConversionTime set value -1
+tag @e[type=vindicator] remove used
+execute as @e[type=vindicator] run data modify entity @s DrownedConversionTime set value -1
 
 #Tornado
 execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}},{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}},{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}]}
@@ -78,5 +78,5 @@ scoreboard players reset @a died
 #Misc
 effect give @a minecraft:saturation infinite 255 true
 execute as @a at @s if predicate disastergame:underwater run damage @s 1 minecraft:drown
-execute as @e[type=husk] at @s if predicate disastergame:underwater run damage @s 1 minecraft:generic_kill
+execute as @e[type=vindicator] at @s positioned ~ ~1 ~ if predicate disastergame:underwater run damage @s 1 minecraft:generic_kill
 tag @a[gamemode=adventure] add alive
