@@ -13,6 +13,7 @@ kill @e[type=block_display,tag=meteor_display]
 kill @e[type=warden,tag=monster]
 kill @e[type=marker,tag=selector]
 kill @e[type=marker,tag=corruption]
+kill @e[type=item,tag=loot_item]
 
 gamemode spectator @a[tag=alive]
 effect clear @a[tag=alive]
