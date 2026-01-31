@@ -81,6 +81,10 @@ execute as @a[tag=alive] at @s run kill @s[y=300,dx=0,dy=1000,dz=0]
 execute as @a[tag=alive,scores={died=1..}] run function disastergame:playerdied
 scoreboard players reset @a died
 
+#Corruption
+execute at @e[type=marker,tag=corruption] run summon chicken ~ ~ ~ {Silent:1b,Tags:["corruption"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000,show_particles:0b}]}
+kill @e[type=chicken,tag=corruption]
+
 #Misc
 effect give @a minecraft:saturation infinite 255 true
 execute as @a at @s if predicate disastergame:underwater run damage @s 1 minecraft:drown
