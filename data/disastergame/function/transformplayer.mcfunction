@@ -17,11 +17,6 @@ kill @n[type=text_display,tag=temp]
 data modify entity @n[type=mannequin,tag=new] profile.id set from entity @s UUID
 tag @n[type=mannequin,tag=new] remove new
 tag @n[type=husk,tag=new] remove new
-effect clear @s nausea
-effect clear @s slowness
-effect clear @s darkness
-effect clear @s resistance
-effect clear @s glowing
-effect clear @s levitation
+effect clear @s
 stopsound @s master minecraft:entity.enderman.stare
 gamemode spectator

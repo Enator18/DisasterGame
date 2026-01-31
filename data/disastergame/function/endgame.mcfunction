@@ -14,6 +14,7 @@ kill @e[type=warden,tag=monster]
 kill @e[type=marker,tag=selector]
 
 gamemode spectator @a[tag=alive]
+effect clear @a[tag=alive]
 tag @a remove alive
 tag @a remove raptured
 tag @a remove infected
