@@ -77,6 +77,6 @@ scoreboard players reset @a died
 
 #Misc
 effect give @a minecraft:saturation infinite 255 true
-execute as @a at @s if block ~ ~ ~ water run damage @s 1 minecraft:drown
-execute as @e[type=husk] at @s if block ~ ~ ~ water run damage @s 1 minecraft:generic_kill
+execute as @a at @s if predicate disastergame:underwater run damage @s 1 minecraft:drown
+execute as @e[type=husk] at @s if predicate disastergame:underwater run damage @s 1 minecraft:generic_kill
 tag @a[gamemode=adventure] add alive
