@@ -9,3 +9,4 @@ execute if entity @n[type=marker,tag=selected,tag=select_awakens] run function d
 kill @n[type=marker,tag=selected]
 bossbar set minecraft:next_disaster players @a
 scoreboard players set &disasters timer 900
+kill @e[type=item,tag=loot_item]
