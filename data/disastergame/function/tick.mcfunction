@@ -58,9 +58,9 @@ tag @e[type=vindicator] remove used
 execute as @e[type=vindicator] run data modify entity @s DrownedConversionTime set value -1
 
 tag @e[type=vindicator,nbt={OnGround:1b}] remove jumping
-execute as @e[type=vindicator,tag=!jumping] at @s if entity @p[tag=alive,distance=5..12] run function disastergame:infectedlunge
-execute as @e[type=vindicator,tag=jumping] at @s if entity @p[tag=alive,distance=..2] run data merge entity @s {Motion:[0.0, 0.0, 0.0]}
-execute as @e[type=vindicator,tag=jumping] at @s if entity @p[tag=alive,distance=..2] run tag @s remove jumping
+execute as @e[type=vindicator,tag=!jumping] at @s if entity @p[tag=alive,distance=4..6] run function disastergame:infectedlunge
+execute as @e[type=vindicator,tag=jumping] at @s if entity @p[tag=alive,distance=..1] run data merge entity @s {Motion:[0.0, 0.0, 0.0]}
+execute as @e[type=vindicator,tag=jumping] at @s if entity @p[tag=alive,distance=..1] run tag @s remove jumping
 
 #Tornado
 execute at @e[type=marker,tag=tornado_emitter] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Marker:1b,NoGravity:1b,Tags:["tornado","tornado_pivot"],Passengers:[{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}},{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}},{id:"minecraft:block_display",interpolation_duration:5,teleport_duration:5,Tags:["tornado","new"],block_state:{Name:"minecraft:white_stained_glass"}}]}

@@ -1,3 +1,3 @@
-tp @s ^ ^ ^2
+tp @s ^ ^ ^1
 data modify storage disastergame:temp Motion set from entity @s Pos
 kill @s
