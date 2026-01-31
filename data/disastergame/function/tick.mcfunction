@@ -86,3 +86,5 @@ effect give @a minecraft:saturation infinite 255 true
 execute as @a at @s if predicate disastergame:underwater run damage @s 1 minecraft:drown
 execute as @e[type=vindicator] at @s if predicate disastergame:underwater run damage @s 1 minecraft:generic_kill
 tag @a[gamemode=adventure] add alive
+execute as @a at @s if block ~ ~-1 ~ sculk run damage @s 1 minecraft:sonic_boom
+execute as @a at @s if block ~ ~ ~ sculk_vein run damage @s 1 minecraft:sonic_boom
