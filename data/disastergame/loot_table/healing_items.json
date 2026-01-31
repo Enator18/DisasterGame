@@ -1,0 +1,234 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 60,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "id": "minecraft:regeneration",
+                          "amplifier": 6,
+                          "duration": 2,
+                          "show_particles": false,
+                          "show_icon": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "minecraft:item_name": "Beetroot",
+                "minecraft:item_model": "beetroot",
+                "minecraft:lore": [
+                  [
+                    {
+                      "color": "gray",
+                      "italic": true,
+                      "text": "Heals for "
+                    },
+                    {
+                      "color": "red",
+                      "text": "❤"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "id": "minecraft:regeneration",
+                          "amplifier": 6,
+                          "duration": 4,
+                          "show_particles": false,
+                          "show_icon": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "minecraft:item_name": "Apple",
+                "minecraft:item_model": "apple",
+                "minecraft:lore": [
+                  [
+                    {
+                      "color": "gray",
+                      "italic": true,
+                      "text": "Heals for "
+                    },
+                    {
+                      "color": "red",
+                      "text": "❤❤"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "id": "minecraft:regeneration",
+                          "amplifier": 6,
+                          "duration": 8,
+                          "show_particles": false,
+                          "show_icon": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "minecraft:item_name": "Cooked Salmon",
+                "minecraft:item_model": "cooked_salmon",
+                "minecraft:lore": [
+                  [
+                    {
+                      "color": "gray",
+                      "italic": true,
+                      "text": "Heals for "
+                    },
+                    {
+                      "color": "red",
+                      "text": "❤❤❤❤"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "id": "minecraft:regeneration",
+                          "amplifier": 6,
+                          "duration": 12,
+                          "show_particles": false,
+                          "show_icon": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "minecraft:item_name": "Pumpkin Pie",
+                "minecraft:item_model": "pumpkin_pie",
+                "minecraft:lore": [
+                  [
+                    {
+                      "color": "gray",
+                      "italic": true,
+                      "text": "Heals for "
+                    },
+                    {
+                      "color": "red",
+                      "text": "❤❤❤❤❤❤"
+                    },
+                    {
+                      "color": "gray",
+                      "italic": true,
+                      "text": " (6)"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 6,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "id": "minecraft:regeneration",
+                          "amplifier": 6,
+                          "duration": 20,
+                          "show_particles": false,
+                          "show_icon": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "minecraft:item_name": "Cake",
+                "minecraft:item_model": "cake",
+                "minecraft:lore": [
+                  [
+                    {
+                      "color": "gray",
+                      "italic": true,
+                      "text": "Heals for "
+                    },
+                    {
+                      "color": "red",
+                      "text": "❤❤❤❤❤❤❤❤❤❤"
+                    },
+                    {
+                      "color": "gray",
+                      "italic": true,
+                      "text": " (10)"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
