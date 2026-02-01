@@ -14,6 +14,7 @@ kill @e[type=warden,tag=monster]
 kill @e[type=marker,tag=selector]
 kill @e[type=marker,tag=corruption]
 kill @e[type=item]
+kill @e[tag=serpent]
 
 gamemode spectator @a[tag=alive]
 effect clear @a[tag=alive]

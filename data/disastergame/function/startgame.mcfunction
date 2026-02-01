@@ -10,6 +10,7 @@ summon marker 0 0 0 {Tags:["selector","select_shuffle"]}
 summon marker 0 0 0 {Tags:["selector","select_acidrain"]}
 summon marker 0 0 0 {Tags:["selector","select_rapture"]}
 summon marker 0 0 0 {Tags:["selector","select_corruption"]}
+summon marker 0 0 0 {Tags:["selector","select_serpent"]}
 
 scoreboard players set &disasters timer 200
 spawnpoint @a 66 82 65

@@ -3,6 +3,7 @@ scoreboard players reset @s timer
 execute as @e[type=block_display,tag=serpent,tag=new] at @s at @n[type=phantom] run rotate @s ~180 ~
 tag @e[type=block_display,tag=serpent] remove new
 execute at @e[type=block_display,tag=serpent,sort=random,limit=1] run summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:fire"},Time:1,Tags:["new"]}
+execute at @n[type=falling_block,tag=new] run playsound minecraft:item.firecharge.use block @a ~ ~ ~ 4 1
 execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[0] double 0.001 run random value -500..500
 execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[1] double 0.001 run random value 200..500
 execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[2] double 0.001 run random value -500..500

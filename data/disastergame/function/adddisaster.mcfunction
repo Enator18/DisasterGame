@@ -6,6 +6,7 @@ execute if entity @n[type=marker,tag=selected,tag=select_shuffle] run function d
 execute if entity @n[type=marker,tag=selected,tag=select_acidrain] run function disastergame:events/acidrain
 execute if entity @n[type=marker,tag=selected,tag=select_rapture] run function disastergame:events/rapture
 execute if entity @n[type=marker,tag=selected,tag=select_corruption] run function disastergame:events/corruption
+execute if entity @n[type=marker,tag=selected,tag=select_serpent] run function disastergame:events/serpent
 kill @n[type=marker,tag=selected]
 bossbar set minecraft:next_disaster players @a
 scoreboard players set &disasters timer 900
