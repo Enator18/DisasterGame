@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "ate_chorus": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "components": {
+            "minecraft:custom_data": {
+              "chorusFruit": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ate_chorus"
+    ]
+  ],
+  "rewards": {
+    "function": "disastergame:adddisaster"
+  }
+}
