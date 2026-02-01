@@ -99,7 +99,7 @@ scoreboard players reset @e[type=item_display,tag=serpent,scores={timer=4..}] ti
 execute as @e[type=block_display,tag=serpent,tag=new] at @s at @n[type=phantom] run rotate @s ~180 ~
 tag @e[type=block_display,tag=serpent] remove new
 scoreboard players add @e[type=block_display,tag=serpent] timer 1
-kill @e[type=block_display,tag=serpent,scores={timer=50..}]
+kill @e[type=block_display,tag=serpent,scores={timer=80..}]
 
 #Misc
 effect give @a minecraft:saturation infinite 255 true
