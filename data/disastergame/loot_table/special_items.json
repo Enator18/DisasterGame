@@ -41,7 +41,8 @@
                   "knockback": 2,
                   "lunge": 2
                 },
-                "minecraft:max_stack_size": 1
+                "minecraft:max_stack_size": 1,
+                "minecraft:max_damage": 8
               }
             }
           ]
