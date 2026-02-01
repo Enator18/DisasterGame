@@ -6,7 +6,3 @@ summon marker 66 82 65 {Tags:["corruption"]}
 summon marker 66 82 65 {Tags:["corruption"]}
 summon marker 66 82 65 {Tags:["corruption"]}
 spreadplayers 66.0 65.0 24 64 false @e[type=marker,tag=corruption]
-
-execute at @e[type=marker,tag=corruption] run fill ~-1 ~-2 ~-1 ~1 ~ ~1 sculk
-execute at @e[type=marker,tag=corruption] run setblock ~ ~-1 ~ sculk_catalyst
-execute at @e[type=marker,tag=corruption] run setblock ~ ~ ~ air
