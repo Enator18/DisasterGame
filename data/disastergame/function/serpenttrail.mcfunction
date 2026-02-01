@@ -8,6 +8,6 @@ execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[0] dou
 execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[1] double 0.001 run random value 200..500
 execute store result entity @e[type=falling_block,tag=new,limit=1] Motion[2] double 0.001 run random value -500..500
 tag @e[type=falling_block,tag=new] remove new
-execute at @p run summon marker ~ ~30 ~ {Tags:["serpent_target"]}
+execute at @p[tag=alive] run summon marker ~ ~30 ~ {Tags:["serpent_target"]}
 data modify entity @n[type=phantom,tag=serpent] anchor_pos set from entity @n[type=marker,tag=serpent_target] Pos
 kill @n[type=marker,tag=serpent_target]
