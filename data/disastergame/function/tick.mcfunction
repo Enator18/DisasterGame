@@ -91,6 +91,7 @@ scoreboard players reset @e[type=marker,tag=corruption,scores={timer=3..}] timer
 kill @e[type=chicken,tag=corruption]
 
 #Flame Serpent
+execute as @e[type=phantom,tag=serpent] run data modify entity @s Fire set value -20
 execute as @n[type=phantom,tag=serpent] at @s on passengers run rotate @s ~180 ~
 scoreboard players add @e[type=phantom,tag=serpent] timer 1
 execute at @e[type=phantom,tag=serpent,scores={timer=4..}] run summon block_display ~ ~1 ~ {Tags:["serpent","new"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0.7071068f,0f,0f,0.7071068f],translation:[-1f,1f,-1f],scale:[2f,2f,2f]},block_state:{Name:"minecraft:fire"}}
