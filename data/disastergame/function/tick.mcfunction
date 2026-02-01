@@ -93,6 +93,7 @@ kill @e[type=chicken,tag=corruption]
 #Flame Serpent
 execute as @e[type=phantom,tag=serpent] run data modify entity @s Fire set value -20
 execute as @n[type=phantom,tag=serpent] at @s on passengers run rotate @s ~180 ~
+execute as @n[type=phantom,tag=serpent] run attribute @s attack_damage base set 0.01
 execute at @e[type=phantom,tag=serpent,predicate=disastergame:serpent_bounds] run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 fire destroy
 execute at @e[type=phantom,tag=serpent] run playsound minecraft:block.blastfurnace.fire_crackle master @a ~ ~ ~ 2
 scoreboard players add @e[type=item_display,tag=serpent] timer 1
