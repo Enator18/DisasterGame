@@ -93,7 +93,7 @@ kill @e[type=chicken,tag=corruption]
 #Flame Serpent
 execute as @e[type=phantom,tag=serpent] run data modify entity @s Fire set value -20
 execute as @n[type=phantom,tag=serpent] at @s on passengers run rotate @s ~180 ~
-execute at @e[type=phantom,tag=serpent] run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 fire destroy
+execute at @e[type=phantom,tag=serpent,predicate=disastergame:serpent_bounds] run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 fire destroy
 scoreboard players add @e[type=item_display,tag=serpent] timer 1
 execute as @e[type=item_display,tag=serpent,scores={timer=4..}] at @s run function disastergame:serpenttrail
 scoreboard players add @e[type=block_display,tag=serpent] timer 1
