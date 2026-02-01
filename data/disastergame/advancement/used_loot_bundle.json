@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "used_loot_bundle": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "components": {
+            "minecraft:custom_data": {
+              "lootBundle": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "used_loot_bundle"
+    ]
+  ],
+  "rewards": {
+    "function": "disastergame:specialloot"
+  }
+}
