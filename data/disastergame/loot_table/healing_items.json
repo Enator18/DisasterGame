@@ -548,6 +548,57 @@
               }
             }
           ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 6,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "golden_apple",
+                "minecraft:custom_name": {
+                  "bold": true,
+                  "color": "gold",
+                  "italic": true,
+                  "text": "Forbidden Fruit"
+                },
+                "minecraft:lore": [
+                  {
+                    "color": "white",
+                    "text": "Tempting..."
+                  }
+                ],
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:consumable": {
+                  "animation": "eat",
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "id": "minecraft:absorption",
+                          "amplifier": 4,
+                          "duration": -1,
+                          "show_particles": false,
+                          "show_icon": false
+                        },
+                        {
+                          "id": "minecraft:regeneration",
+                          "amplifier": 6,
+                          "duration": 20,
+                          "show_particles": false,
+                          "show_icon": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "minecraft:custom_data": "{forbiddenFruit:1b}"
+              }
+            }
+          ]
         }
       ]
     }
