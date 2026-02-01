@@ -1,4 +1,3 @@
-advancement revoke @s only disastergame:ate_forbidden_fruit
 tag @e[type=marker,tag=selector,sort=random,limit=1] add selected
 execute if entity @n[type=marker,tag=selected,tag=select_flood] run function disastergame:events/flood
 execute if entity @n[type=marker,tag=selected,tag=select_infection] run function disastergame:events/infection

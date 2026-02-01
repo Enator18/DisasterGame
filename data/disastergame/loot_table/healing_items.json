@@ -592,6 +592,10 @@
                           "show_icon": false
                         }
                       ]
+                    },
+                    {
+                      "type": "minecraft:play_sound",
+                      "sound": "entity.lightning_bolt.thunder"
                     }
                   ]
                 },

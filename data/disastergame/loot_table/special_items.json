@@ -3,7 +3,129 @@
     {
       "rolls": 1,
       "entries": [
-        
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:totem_of_undying",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {
+                  "bold": true,
+                  "color": "yellow",
+                  "italic": true,
+                  "text": "Totem of Undying"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wooden_spear",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:weapon": {
+                  "item_damage_per_attack": 0
+                },
+                "minecraft:item_model": "stick",
+                "minecraft:custom_name": {
+                  "bold": true,
+                  "color": "aqua",
+                  "italic": true,
+                  "text": "Stick of Lunging"
+                },
+                "minecraft:enchantments": {
+                  "knockback": 2,
+                  "lunge": 2
+                },
+                "minecraft:max_stack_size": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "chorus_fruit",
+                "minecraft:consumable": {
+                  "consume_seconds": 1.6
+                },
+                "minecraft:custom_name": {
+                  "bold": true,
+                  "color": "light_purple",
+                  "italic": true,
+                  "text": "Chorus Fruit"
+                },
+                "minecraft:lore": [
+                  {
+                    "color": "white",
+                    "italic": true,
+                    "text": "Teleports you to a random point on the map"
+                  }
+                ],
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:custom_data": "{chorusFruit:1b}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:snowball",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:use_cooldown": {
+                  "seconds": 1,
+                  "cooldown_group": "throwable"
+                },
+                "minecraft:item_model": "tnt",
+                "minecraft:item_name": {
+                  "bold": true,
+                  "color": "red",
+                  "italic": true,
+                  "text": "Throwable TNT"
+                },
+                "minecraft:lore": [
+                  {
+                    "color": "white",
+                    "italic": true,
+                    "text": "Can be thrown!"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {
+                  "bold": true,
+                  "color": "dark_purple",
+                  "italic": true,
+                  "text": "Ender Pearl"
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
       ]
     }
   ]
