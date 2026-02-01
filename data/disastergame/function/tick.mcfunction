@@ -90,6 +90,15 @@ execute at @e[type=marker,tag=corruption,scores={timer=3..}] run summon chicken 
 scoreboard players reset @e[type=marker,tag=corruption,scores={timer=3..}] timer
 kill @e[type=chicken,tag=corruption]
 
+#Flame Serpent
+execute as @n[type=phantom,tag=serpent] at @s on passengers run rotate @s ~180 ~
+scoreboard players add @e[type=block_display,tag=serpent] timer 1
+execute at @e[type=block_display,tag=serpent_head,scores={timer=4..}] run summon block_display ~ ~ ~ {teleport_duration:5,Tags:["serpent","serpent_trail","new"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[-0.7071068f,0f,0f,0.7071068f],translation:[-1f,-1f,0f],scale:[2f,2f,2f]},block_state:{Name:"minecraft:fire"}}
+scoreboard players reset @e[type=block_display,tag=serpent_head,scores={timer=4..}] timer
+execute as @e[type=block_display,tag=serpent_trail,tag=new] at @s at @n[type=phantom] run rotate @s ~ ~
+tag @e[type=block_display,tag=serpent_trail] remove new
+kill @e[type=block_display,tag=serpent_trail,scores={timer=50..}]
+
 #Misc
 effect give @a minecraft:saturation infinite 255 true
 execute as @a at @s if predicate disastergame:underwater run damage @s 1 minecraft:drown
