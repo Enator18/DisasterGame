@@ -19,6 +19,6 @@
     ]
   ],
   "rewards": {
-    "function": "disastergame:adddisaster"
+    "function": "disastergame:randomteleport"
   }
 }
