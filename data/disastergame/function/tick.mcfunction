@@ -93,7 +93,7 @@ kill @e[type=chicken,tag=corruption]
 #Flame Serpent
 execute as @n[type=phantom,tag=serpent] at @s on passengers run rotate @s ~180 ~
 scoreboard players add @e[type=phantom,tag=serpent] timer 1
-execute at @e[type=phantom,tag=serpent,scores={timer=4..}] run summon block_display ~ ~ ~ {Tags:["serpent"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0.7071068f,0f,0f,0.7071068f],translation:[-1f,1f,-1f],scale:[2f,2f,2f]},block_state:{Name:"minecraft:fire"}}
+execute at @e[type=phantom,tag=serpent,scores={timer=4..}] run summon block_display ~ ~ ~ {Tags:["serpent","new"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0.7071068f,0f,0f,0.7071068f],translation:[-1f,1f,-1f],scale:[2f,2f,2f]},block_state:{Name:"minecraft:fire"}}
 scoreboard players reset @e[type=phantom,tag=serpent,scores={timer=4..}] timer
 execute as @e[type=block_display,tag=serpent,tag=new] at @s at @n[type=phantom] run rotate @s ~180 ~
 tag @e[type=block_display,tag=serpent] remove new
