@@ -33,11 +33,12 @@
                   [
                     {
                       "color": "gray",
-                      "italic": true,
+                      "italic": false,
                       "text": "Heals for "
                     },
                     {
                       "color": "red",
+                      "italic": false,
                       "text": "❤"
                     }
                   ]
@@ -76,11 +77,12 @@
                   [
                     {
                       "color": "gray",
-                      "italic": true,
+                      "italic": false,
                       "text": "Heals for "
                     },
                     {
                       "color": "red",
+                      "italic": false,
                       "text": "❤❤"
                     }
                   ]
@@ -119,11 +121,12 @@
                   [
                     {
                       "color": "gray",
-                      "italic": true,
+                      "italic": false,
                       "text": "Heals for "
                     },
                     {
                       "color": "red",
+                      "italic": false,
                       "text": "❤❤❤❤"
                     }
                   ]
@@ -162,16 +165,17 @@
                   [
                     {
                       "color": "gray",
-                      "italic": true,
+                      "italic": false,
                       "text": "Heals for "
                     },
                     {
                       "color": "red",
+                      "italic": false,
                       "text": "❤❤❤❤❤❤"
                     },
                     {
                       "color": "gray",
-                      "italic": true,
+                      "italic": false,
                       "text": " (6)"
                     }
                   ]
@@ -210,17 +214,334 @@
                   [
                     {
                       "color": "gray",
-                      "italic": true,
+                      "italic": false,
                       "text": "Heals for "
                     },
                     {
                       "color": "red",
+                      "italic": false,
                       "text": "❤❤❤❤❤❤❤❤❤❤"
                     },
                     {
                       "color": "gray",
-                      "italic": true,
+                      "italic": false,
                       "text": " (10)"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "id": "minecraft:regeneration",
+                          "amplifier": 6,
+                          "duration": 8,
+                          "show_particles": false,
+                          "show_icon": false
+                        },
+                        {
+                          "id": "minecraft:glowing",
+                          "amplifier": 0,
+                          "duration": 200,
+                          "show_particles": false,
+                          "show_icon": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "minecraft:item_name": "Glow Berries",
+                "minecraft:item_model": "glow_berries",
+                "minecraft:lore": [
+                  [
+                    {
+                      "color": "gray",
+                      "italic": false,
+                      "text": "Heals for "
+                    },
+                    {
+                      "color": "red",
+                      "italic": false,
+                      "text": "❤"
+                    }
+                  ],
+                  [
+                    {
+                      "color": "blue",
+                      "italic": false,
+                      "text": "Glowing (0:10)"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "id": "minecraft:regeneration",
+                          "amplifier": 6,
+                          "duration": 6,
+                          "show_particles": false,
+                          "show_icon": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "minecraft:item_name": "Baked Potato",
+                "minecraft:item_model": "baked_potato",
+                "minecraft:lore": [
+                  [
+                    {
+                      "color": "gray",
+                      "italic": false,
+                      "text": "Heals for "
+                    },
+                    {
+                      "color": "red",
+                      "italic": false,
+                      "text": "❤❤❤"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "id": "minecraft:regeneration",
+                          "amplifier": 6,
+                          "duration": 8,
+                          "show_particles": false,
+                          "show_icon": false
+                        },
+                        {
+                          "id": "minecraft:absorption",
+                          "amplifier": 0,
+                          "duration": -1,
+                          "show_particles": false,
+                          "show_icon": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "minecraft:item_name": "Golden Carrot",
+                "minecraft:item_model": "golden_carrot",
+                "minecraft:lore": [
+                  [
+                    {
+                      "color": "gray",
+                      "italic": false,
+                      "text": "Heals for "
+                    },
+                    {
+                      "color": "red",
+                      "italic": false,
+                      "text": "❤❤❤❤"
+                    },
+                    {
+                      "color": "gray",
+                      "italic": false,
+                      "text": " + "
+                    },
+                    {
+                      "color": "yellow",
+                      "italic": false,
+                      "text": "❤❤"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "id": "minecraft:regeneration",
+                          "amplifier": 6,
+                          "duration": 8,
+                          "show_particles": false,
+                          "show_icon": false
+                        },
+                        {
+                          "id": "minecraft:speed",
+                          "amplifier": 1,
+                          "duration": 900,
+                          "show_particles": false,
+                          "show_icon": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "minecraft:item_name": "Cookie",
+                "minecraft:item_model": "cookie",
+                "minecraft:lore": [
+                  [
+                    {
+                      "color": "gray",
+                      "italic": false,
+                      "text": "Heals for "
+                    },
+                    {
+                      "color": "red",
+                      "italic": false,
+                      "text": "❤❤"
+                    }
+                  ],
+                  [
+                    {
+                      "color": "blue",
+                      "italic": false,
+                      "text": "Speed (0:45)"
+                    }
+                  ],
+                  [
+                    " "
+                  ],
+                  [
+                    {
+                      "color": "dark_purple",
+                      "italic": false,
+                      "text": "When Consumed:"
+                    }
+                  ],
+                  [
+                    {
+                      "color": "blue",
+                      "italic": false,
+                      "text": "+20% Speed"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:consumable": {
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:apply_effects",
+                      "effects": [
+                        {
+                          "id": "minecraft:regeneration",
+                          "amplifier": 6,
+                          "duration": 4,
+                          "show_particles": false,
+                          "show_icon": false
+                        },
+                        {
+                          "id": "minecraft:jump_boost",
+                          "amplifier": 1,
+                          "duration": 900,
+                          "show_particles": false,
+                          "show_icon": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "minecraft:item_name": "Rabbit's Foot",
+                "minecraft:item_model": "rabbit_foot",
+                "minecraft:lore": [
+                  [
+                    {
+                      "color": "gray",
+                      "italic": false,
+                      "text": "Heals for "
+                    },
+                    {
+                      "color": "red",
+                      "italic": false,
+                      "text": "❤"
+                    }
+                  ],
+                  [
+                    {
+                      "color": "blue",
+                      "italic": false,
+                      "text": "Jump Boost (0:45)"
+                    }
+                  ],
+                  [
+                    {
+                      "italic": false,
+                      "text": " "
+                    }
+                  ],
+                  [
+                    {
+                      "color": "dark_purple",
+                      "italic": false,
+                      "text": "When Consumed:"
+                    }
+                  ],
+                  [
+                    {
+                      "color": "blue",
+                      "italic": false,
+                      "text": "+2 Safe Fall Distance"
                     }
                   ]
                 ]
