@@ -1,5 +1,5 @@
 #Disaster Timer
-execute if score &disasters timer matches 0 run function disastergame:adddisaster
+execute if score &disasters timer matches 0 run function disastergame:disasterloop
 execute if score &disasters timer matches 450 run function disastergame:spawnitems
 execute if score &disasters timer matches 0.. run scoreboard players remove &disasters timer 1
 execute store result bossbar minecraft:next_disaster value run scoreboard players get &disasters timer

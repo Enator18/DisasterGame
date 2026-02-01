@@ -1,3 +1,4 @@
+advancement revoke @s only disastergame:ate_forbidden_fruit
 tag @e[type=marker,tag=selector,sort=random,limit=1] add selected
 execute if entity @n[type=marker,tag=selected,tag=select_flood] run function disastergame:events/flood
 execute if entity @n[type=marker,tag=selected,tag=select_infection] run function disastergame:events/infection
@@ -8,6 +9,3 @@ execute if entity @n[type=marker,tag=selected,tag=select_rapture] run function d
 execute if entity @n[type=marker,tag=selected,tag=select_corruption] run function disastergame:events/corruption
 execute if entity @n[type=marker,tag=selected,tag=select_serpent] run function disastergame:events/serpent
 kill @n[type=marker,tag=selected]
-bossbar set minecraft:next_disaster players @a
-scoreboard players set &disasters timer 900
-kill @e[type=item]

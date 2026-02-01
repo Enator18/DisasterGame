@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "ate_forbidden_fruit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "components": {
+            "minecraft:custom_data": {
+              "forbiddenFruit": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ate_forbidden_fruit"
+    ]
+  ],
+  "rewards": {
+    "function": "disastergame:adddisaster"
+  }
+}
