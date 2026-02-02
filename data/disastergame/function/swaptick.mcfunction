@@ -5,9 +5,5 @@ execute if score &shuffle timer matches 40 run title @a title {"color":"white","
 execute if score &shuffle timer matches 40 at @a run playsound minecraft:item.brush.brushing.generic master @a ~ ~ ~ 1 1
 execute if score &shuffle timer matches 20 run title @a title {"color":"white","italic":true,"text":"Swapping in 1..."}
 execute if score &shuffle timer matches 20 at @a run playsound minecraft:item.brush.brushing.generic master @a ~ ~ ~ 1 1
-execute if score &shuffle timer matches 0 at @a run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 1
-execute if score &shuffle timer matches 0 run function disastergame:swapplayers
-execute if score &shuffle timer matches 0 at @e[tag=alive] run particle poof ~ ~1 ~ .25 .4 .25 0 25
-execute if score &shuffle timer matches 0 run title @a clear
-execute if score &shuffle timer matches 0 store result score &shuffle timer run random value 600..1500
+execute if score &shuffle timer matches 0 run function disastergame:maybeswap
 scoreboard players remove &shuffle timer 1
