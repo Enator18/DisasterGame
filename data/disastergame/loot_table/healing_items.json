@@ -249,7 +249,7 @@
                         {
                           "id": "minecraft:regeneration",
                           "amplifier": 6,
-                          "duration": 8,
+                          "duration": 2,
                           "show_particles": false,
                           "show_icon": false
                         },
