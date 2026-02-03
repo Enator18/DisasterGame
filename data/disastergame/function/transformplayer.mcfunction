@@ -18,5 +18,6 @@ data modify entity @n[type=mannequin,tag=new] profile.id set from entity @s UUID
 tag @n[type=mannequin,tag=new] remove new
 tag @n[type=vindicator,tag=new] remove new
 effect clear @s
+clear @s
 stopsound @s master minecraft:entity.enderman.stare
 gamemode spectator
