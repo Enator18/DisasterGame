@@ -38,6 +38,7 @@ jobs:
           username: ${{ secrets.SFTP_USERNAME }}
           server: ${{ secrets.SFTP_IP }}
           port: '2222'
+          sftpArgs: '-v'
           password: ${{ secrets.SFTP_PASSWORD }}
           local_path: 'data/*'
           remote_path: '/world/datapacks/disaster-game/data'
