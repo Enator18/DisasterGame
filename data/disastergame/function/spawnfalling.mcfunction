@@ -1,1 +1,1 @@
-$summon falling_block ~ ~ ~ {BlockState:{Name:"$(Name)",Properties:$(Properties)},Time:1}
+$summon falling_block ~ ~ ~ {BlockState:$(minecraft:custom_data),Time:1}
