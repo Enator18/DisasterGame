@@ -42,7 +42,7 @@ jobs:
           remote-user: ${{ secrets.SFTP_USERNAME }}
           remote-password: ${{ secrets.SFTP_PASSWORD }}
           remote-port: '2222'
-          local-path: 'data/*'
+          local-path: 'data'
           remote-path: '/world/datapacks/disaster-game/data'
               
       - name: Reload MC server

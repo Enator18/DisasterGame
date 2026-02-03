@@ -1,1 +1,1 @@
-say Datapack loaded successfully!3
+say Datapack loaded successfully!4
