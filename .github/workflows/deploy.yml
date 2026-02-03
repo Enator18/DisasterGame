@@ -29,7 +29,7 @@ jobs:
           port: '8106'
           password: ${{ secrets.RCON_PASSWORD }}
           commit_msg: ${{ github.event.head_commit.message || github.event.workflow_run.head_commit.message || github.event.pull_request.title || github.sha }}
-          commands: '["say Uploading datapack files for commit: [${{github.event.inputs.commit_msg}}]"]'
+          commands: '["say Uploading datapack files: [${{github.event.inputs.commit_msg}}]"]'
 
       # Install lftp
       - name: Install lftp
@@ -37,12 +37,14 @@ jobs:
 
       # Uploads the `data` directory to the server via SFTP with host key verification disabled
       - name: Upload data directory
-        run: |
-          echo "Uploading data directory to server"
-          lftp -u ${{ secrets.SFTP_USERNAME }},${{ secrets.SFTP_PASSWORD }} sftp://${{ secrets.SFTP_IP }} -e "
-            set sftp:connect-program 'ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null';
-            mirror -R data/ /world/datapacks/disaster-game/data;
-            bye"
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          username: ${{ secrets.SFTP_USERNAME }}
+          server: ${{ secrets.SFTP_IP }}
+          port: '2222'
+          password: ${{ secrets.SFTP_PASSWORD }}
+          local_path: 'data/*'
+          remote_path: '/world/datapacks/disaster-game/data'
               
       - name: Reload MC server
         uses: wolfigster/rcon-action@v1.0.2
