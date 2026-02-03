@@ -39,7 +39,7 @@ jobs:
       - name: Upload data directory
         run: |
           echo "Uploading data directory to server"
-          lftp -u ${{ secrets.SFTP_USERNAME }},${{ secrets.SFTP_PASSWORD }} sftp://${{ secrets.SFTP_IP }} -e "
+          lftp -u ${{ secrets.SFTP_USERNAME }},${{ secrets.SFTP_PASSWORD }} sftp://${{ secrets.SFTP_IP }}:2222 -e "
             set sftp:connect-program 'ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null';
             mirror -R data/ /world/datapacks/disaster-game/data;
             bye"
