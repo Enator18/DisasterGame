@@ -33,15 +33,15 @@ jobs:
 
       # Uploads the `data` directory to the server via SFTP with host key verification disabled
       - name: Upload data directory
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        uses: milanmk/actions-file-deployer@1.17
         with:
-          username: ${{ secrets.SFTP_USERNAME }}
-          server: ${{ secrets.SFTP_IP }}
-          port: '2222'
-          sftpArgs: '-v'
-          password: ${{ secrets.SFTP_PASSWORD }}
-          local_path: 'data/*'
-          remote_path: '/world/datapacks/disaster-game/data'
+          remote-protocol: 'sftp'
+          remote-host: ${{ secrets.SFTP_IP }}
+          remote-user: ${{ secrets.SFTP_USERNAME }}
+          remote-password: ${{ secrets.SFTP_PASSWORD }}
+          remote-port: '2222'
+          local-path: 'data/*'
+          remote-path: '/world/datapacks/disaster-game/data'
               
       - name: Reload MC server
         uses: wolfigster/rcon-action@v1.0.2
