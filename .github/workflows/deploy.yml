@@ -21,8 +21,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Send initial message
         uses: wolfigster/rcon-action@v1.0.2
@@ -31,19 +29,20 @@ jobs:
           port: '8106'
           password: ${{ secrets.RCON_PASSWORD }}
           commit_msg: ${{ github.event.head_commit.message || github.event.workflow_run.head_commit.message || github.event.pull_request.title || github.sha }}
-          commands: '["say Uploading datapack files: [${{github.event.inputs.commit_msg}}]"]'
+          commands: '["say Uploading datapack files..."]'
+
+      # Install lftp
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
 
       # Uploads the `data` directory to the server via SFTP with host key verification disabled
       - name: Upload data directory
-        uses: milanmk/actions-file-deployer@1.17
-        with:
-          remote-protocol: 'sftp'
-          remote-host: ${{ secrets.SFTP_IP }}
-          remote-user: ${{ secrets.SFTP_USERNAME }}
-          remote-password: ${{ secrets.SFTP_PASSWORD }}
-          remote-port: '2222'
-          local-path: 'data'
-          remote-path: '/world/datapacks/disaster-game/data'
+        run: |
+          echo "Uploading data directory to server"
+          lftp -u ${{ secrets.SFTP_USERNAME }},${{ secrets.SFTP_PASSWORD }} sftp://${{ secrets.SFTP_IP }} -e "
+            set sftp:connect-program 'ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null';
+            mirror -R data/ /world/datapacks/disaster-game/data;
+            bye"
               
       - name: Reload MC server
         uses: wolfigster/rcon-action@v1.0.2
