@@ -1,6 +1,5 @@
-summon item_display ~ ~ ~ {UUID:[I;0,0,0,0]}
-execute at @s positioned ~ ~ ~ run loot replace entity 0-0-0-0-0 contents loot blockstate:get
+summon item_display ~ ~ ~ {Tags:["temp"]}
+execute at @s positioned ~ ~ ~ run loot replace entity @n[type=item_display,tag=temp] contents loot blockstate:get
 setblock ~ ~ ~ air
-function disastergame:spawnfalling with entity 0-0-0-0-0 item.components.minecraft:custom_data
-tellraw @a {"nbt":"item.components.minecraft:custom_data","entity":"0-0-0-0-0"}
-kill 0-0-0-0-0
+function disastergame:spawnfalling with entity @n[type=item_display,tag=temp] item.components.minecraft:custom_data
+kill @n[type=item_display,tag=temp]
