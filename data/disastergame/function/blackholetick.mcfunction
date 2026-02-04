@@ -1,5 +1,7 @@
-execute store result entity @s Rotation[0] float 0.001 run random value -180000..180000
-execute store result entity @s Rotation[1] float 0.001 run random value -90000..90000
+execute store result storage disastergame:temp arg1 int 1 run random value -1000..1000
+execute store result storage disastergame:temp arg2 int 1 run random value -1000..1000
+execute store result storage disastergame:temp arg3 int 1 run random value -1000..1000
+function disastergame:lookat
 scoreboard players reset &recursiveLimit temp
 function disastergame:raycast
 execute as @e[type=falling_block] at @s run function disastergame:pullblock
