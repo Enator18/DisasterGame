@@ -10,4 +10,4 @@ scoreboard players operation @s MotionZ += &temp MotionZ
 execute store result entity @s Motion[0] double 0.0001 run scoreboard players get @s MotionX
 execute store result entity @s Motion[1] double 0.0001 run scoreboard players get @s MotionY
 execute store result entity @s Motion[2] double 0.0001 run scoreboard players get @s MotionZ
-execute if entity @n[type=armor_stand,tag=blackhole,distance=..1] run kill @s
+execute if entity @n[type=armor_stand,tag=blackhole,distance=..2] run kill @s
