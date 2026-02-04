@@ -1,6 +1,7 @@
 {
   "values": [
     "minecraft:air",
-    "minecraft:barrier"
+    "minecraft:barrier",
+    "minecraft:water"
   ]
 }
