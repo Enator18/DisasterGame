@@ -1,0 +1,3 @@
+scoreboard players add &recursiveLimit temp 1
+execute unless score &recursiveLimit temp matches 384.. if block ~ ~ ~ air positioned ^ ^ ^0.5 run function disastergame:raycast
+execute unless block ~ ~ ~ barrier run setblock ~ ~ ~ air
