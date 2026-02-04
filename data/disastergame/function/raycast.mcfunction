@@ -1,3 +1,3 @@
 scoreboard players add &recursiveLimit temp 1
-execute unless score &recursiveLimit temp matches 20.. if block ~ ~ ~ air positioned ^ ^ ^0.5 run function disastergame:raycast
+execute unless score &recursiveLimit temp matches 40.. if block ~ ~ ~ air positioned ^ ^ ^0.5 run function disastergame:raycast
 execute unless block ~ ~ ~ barrier run function disastergame:converttofalling
