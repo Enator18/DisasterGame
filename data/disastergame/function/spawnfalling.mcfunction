@@ -1,1 +1,1 @@
-$summon falling_block ~ ~ ~ {BlockState:$(arg1),Time:1}
+$summon falling_block ~ ~ ~ {BlockState:$(arg1),Time:1,NoGravity:true}
