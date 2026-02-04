@@ -1,0 +1,1 @@
+$execute positioned ^ ^ ^$(radius) run function disastergame:raycast

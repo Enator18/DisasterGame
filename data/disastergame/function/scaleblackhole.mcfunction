@@ -1,0 +1,2 @@
+$data modify entity @n[type=item_display,tag=blackhole_display] transformation set value {left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,$(radius),0f],scale:[$(quadRadius),$(quadRadius),$(quadRadius)]}
+$kill @e[type=falling_block,distance=..$(radius)]
