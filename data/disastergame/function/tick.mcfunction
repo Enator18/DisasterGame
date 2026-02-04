@@ -97,6 +97,9 @@ execute as @e[type=item_display,tag=serpent,scores={timer=4..}] at @s run functi
 scoreboard players add @e[type=block_display,tag=serpent] timer 1
 kill @e[type=block_display,tag=serpent,scores={timer=80..}]
 
+#Black Hole
+execute as @n[type=armor_stand,tag=blackhole] at @s run function disastergame:blackholetick
+
 #Misc
 effect give @a minecraft:saturation infinite 255 true
 execute as @a at @s if predicate disastergame:underwater run damage @s 1 minecraft:drown
