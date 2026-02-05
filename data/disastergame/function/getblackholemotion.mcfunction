@@ -1,4 +1,4 @@
-tp @s ^ ^ ^0.1
+tp @s ^ ^ ^0.05
 data modify storage disastergame:temp Motion set from entity @s Pos
 execute store result score &temp MotionX run data get entity @s Pos[0] 10000
 execute store result score &temp MotionY run data get entity @s Pos[1] 10000
