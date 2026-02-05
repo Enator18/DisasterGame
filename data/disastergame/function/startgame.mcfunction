@@ -2,6 +2,7 @@ tag @a[tag=!dev] add alive
 spreadplayers 66.0 65.0 10 64 false @a[tag=alive]
 gamemode adventure @a[tag=alive]
 effect give @a[tag=alive] minecraft:instant_health 1 5
+clear @a
 
 summon marker 0 0 0 {Tags:["selector","select_flood"]}
 summon marker 0 0 0 {Tags:["selector","select_meteors"]}
