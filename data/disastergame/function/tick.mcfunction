@@ -86,8 +86,8 @@ execute at @e[type=marker,tag=corruption] run fill ~-1 ~-2 ~-1 ~1 ~ ~1 sculk rep
 execute at @e[type=marker,tag=corruption] run setblock ~ ~-1 ~ sculk_catalyst
 execute at @e[type=marker,tag=corruption] run setblock ~ ~ ~ air
 scoreboard players add @e[type=marker,tag=corruption] timer 1
-execute at @e[type=marker,tag=corruption,scores={timer=3..}] run summon chicken ~ ~ ~ {Silent:1b,Tags:["corruption"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000,show_particles:0b}]}
-scoreboard players reset @e[type=marker,tag=corruption,scores={timer=3..}] timer
+execute at @e[type=marker,tag=corruption,scores={timer=2..}] run summon chicken ~ ~ ~ {Silent:1b,Tags:["corruption"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:10000,show_particles:0b}]}
+scoreboard players reset @e[type=marker,tag=corruption,scores={timer=2..}] timer
 kill @e[type=chicken,tag=corruption]
 
 #Flame Serpent
