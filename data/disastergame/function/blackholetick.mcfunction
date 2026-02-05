@@ -1,5 +1,5 @@
-execute store result storage disastergame:temp radius double 0.2 run scoreboard players get @s radius
-execute store result storage disastergame:temp quadRadius double 0.8 run scoreboard players get @s radius
+execute store result storage disastergame:temp radius double 0.1 run scoreboard players get @s radius
+execute store result storage disastergame:temp quadRadius double 0.4 run scoreboard players get @s radius
 function disastergame:scaleblackhole with storage disastergame:temp
 function disastergame:pullblocks
 scoreboard players reset &recursiveLimit2 temp
