@@ -6,3 +6,4 @@ summon marker 66 82 65 {Tags:["corruption"]}
 summon marker 66 82 65 {Tags:["corruption"]}
 summon marker 66 82 65 {Tags:["corruption"]}
 spreadplayers 66.0 65.0 24 64 false @e[type=marker,tag=corruption]
+execute as @e[type=marker,tag=corruption] at @s positioned over motion_blocking_no_leaves run tp @s ~ ~ ~
