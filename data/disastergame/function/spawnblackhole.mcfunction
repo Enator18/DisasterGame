@@ -4,3 +4,4 @@ scoreboard players set @n[type=armor_stand,tag=new] radius 10
 scoreboard players set @n[type=armor_stand,tag=new] raycastLimit 20
 scoreboard players set @n[type=armor_stand,tag=new] volume 1000
 scoreboard players set @n[type=armor_stand,tag=new] mass 1000
+tag @n[type=armor_stand,tag=new] remove new
