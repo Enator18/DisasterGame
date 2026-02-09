@@ -8,11 +8,10 @@ execute store result bossbar minecraft:next_disaster value run scoreboard player
 execute if score &meteors timer matches 0.. run scoreboard players remove &meteors timer 1
 execute if score &meteors timer matches 0 run function disastergame:spawnmeteor
 execute if score &meteors timer matches 0 run scoreboard players set &meteors timer 24
-execute at @e[type=armor_stand,tag=meteor] run particle minecraft:campfire_cosy_smoke ~ ~1 ~ .25 0 .25 0 10 force
-execute at @e[type=armor_stand,tag=meteor] run particle minecraft:flame ~ ~1 ~ .25 0 .25 0 10 force
+execute at @e[type=armor_stand,tag=meteor] run particle minecraft:campfire_cosy_smoke ~ ~4 ~ .2 .3 .2 0 8 force
+execute at @e[type=armor_stand,tag=meteor] run particle minecraft:flame ~ ~4 ~ .2 .3 .2 0 8 force
 scoreboard players add @e[type=armor_stand,tag=meteor] timer 1
-execute at @e[type=armor_stand,tag=meteor,scores={timer=4..}] run playsound minecraft:item.firecharge.use block @a ~ ~ ~ 3 0
-execute at @e[type=armor_stand,tag=meteor,scores={timer=4..}] run playsound minecraft:entity.breeze.land master @a ~ ~ ~ 3 0
+execute at @e[type=armor_stand,tag=meteor,scores={timer=4..}] run playsound minecraft:item.firecharge.use block @a ~ ~ ~ 2 0
 scoreboard players reset @e[type=armor_stand,tag=meteor,scores={timer=4..}] timer
 execute as @e[type=armor_stand,tag=meteor,nbt={OnGround:1b}] at @s run function disastergame:meteorhit
 execute as @e[type=armor_stand,tag=frag,nbt={OnGround:1b}] at @s run function disastergame:fraghit
